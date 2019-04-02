@@ -129,10 +129,10 @@ export default {
       }
     },
     setInitValue: function () {
-      if (this.value === undefined || this.value['start'] == null || this.value['start'] === undefined || this.value['end'] == null || this.value['end'] === undefined) {
+      /* if (this.value === undefined || this.value['start'] == null || this.value['start'] === undefined || this.value['end'] == null || this.value['end'] === undefined) {
         this.start_value = Date.now()
         this.end_value = Date.now()
-      }
+      } */
       this.start_value = this.value['start']
       this.end_value = this.value['end']
     },
@@ -141,7 +141,7 @@ export default {
       return Math.abs(dif) === Math.abs(hintSecond)
     },
     chunkArray: function (chunkSize) {
-      let index = 0
+      let index
       let arrayLength = this.relativeDate.length
       let tempArray = []
       for (index = 0; index < arrayLength; index += chunkSize) {
